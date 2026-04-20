@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAFÉ MORI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__logo">CAFÉ MORI</div>
+    <ul class="nav__links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#access">Access</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__sub">森の静けさを、一杯に。</p>
+      <h1 class="hero__title">CAFÉ MORI</h1>
+      <p class="hero__desc">自然に囲まれた隠れ家カフェ。<br>こだわりの豆と、丁寧に淹れる一杯をどうぞ。</p>
+      <a href="#menu" class="btn">メニューを見る</a>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <div class="about__inner">
+        <div class="about__image">
+          <div class="about__image-placeholder"></div>
+        </div>
+        <div class="about__text">
+          <p class="section-label">Our Story</p>
+          <h2 class="section-title">森の中の<br>小さな珈琲店</h2>
+          <p>CAFÉ MORIは、2018年に東京・奥多摩の豊かな自然の中に生まれました。農園から直接仕入れたシングルオリジンのコーヒー豆を、一杯一杯丁寧にハンドドリップでお届けします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="container">
+      <p class="section-label">Our Menu</p>
+      <h2 class="section-title">こだわりの一杯</h2>
+      <div class="menu__grid">
+
+        <div class="menu-card">
+          <div class="menu-card__icon">☕</div>
+          <h3 class="menu-card__name">深森（しんもり）</h3>
+          <p class="menu-card__desc">ナッツとダークチョコレートの余韻。奥多摩の深い森を一杯に閉じ込めた、MORIの原点。</p>
+          <p class="menu-card__price">¥650</p>
+        </div>
+
+        <div class="menu-card menu-card--featured">
+          <div class="menu-card__badge">人気No.1</div>
+          <div class="menu-card__icon">🌿</div>
+          <h3 class="menu-card__name">翠（みどり）ラテ</h3>
+          <p class="menu-card__desc">京都産抹茶と濃厚なミルクフォームが織りなす、木漏れ日のような上品な甘さ。</p>
+          <p class="menu-card__price">¥750</p>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card__icon">🫐</div>
+          <h3 class="menu-card__name">夜明けの果実</h3>
+          <p class="menu-card__desc">ブルーベリーとフローラルな香りが広がる、エチオピア農園直送のシングルオリジン。</p>
+          <p class="menu-card__price">¥800</p>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card__icon">🍰</div>
+          <h3 class="menu-card__name">森の恵み</h3>
+          <p class="menu-card__desc">奥多摩の地元素材を使った、シェフ手作りの季節限定スイーツ。今だけの味をどうぞ。</p>
+          <p class="menu-card__price">¥550〜</p>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card__icon">🧊</div>
+          <h3 class="menu-card__name">夜露（よつゆ）</h3>
+          <p class="menu-card__desc">12時間、時間をかけてじっくり抽出。森の夜気のようになめらかで澄んだ一杯。</p>
+          <p class="menu-card__price">¥700</p>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card__icon">🥐</div>
+          <h3 class="menu-card__name">夜明けの森セット</h3>
+          <p class="menu-card__desc">自家製パンとドリンクの朝限定セット。静かな森の朝を、ゆっくりと始めましょう。</p>
+          <p class="menu-card__price">¥950</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="access" id="access">
+    <div class="container">
+      <p class="section-label">Access</p>
+      <h2 class="section-title">お越しの前に</h2>
+      <div class="access__inner">
+        <div class="access__map">
+          <div class="access__map-placeholder">
+            <span>Map</span>
+          </div>
+        </div>
+        <div class="access__info">
+          <dl class="access__list">
+            <div class="access__item">
+              <dt>住所</dt>
+              <dd>〒198-0001<br>東京都青梅市森の丘1-2-3</dd>
+            </div>
+            <div class="access__item">
+              <dt>営業時間</dt>
+              <dd>平日 9:00 — 18:00<br>土日祝 8:00 — 19:00</dd>
+            </div>
+            <div class="access__item">
+              <dt>定休日</dt>
+              <dd>毎週火曜日</dd>
+            </div>
+            <div class="access__item">
+              <dt>アクセス</dt>
+              <dd>JR青梅線「奥多摩駅」より徒歩8分</dd>
+            </div>
+            <div class="access__item">
+              <dt>お問い合わせ</dt>
+              <dd>info@cafemori.jp</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__logo">CAFÉ MORI</p>
+      <p class="footer__copy">&copy; 2024 CAFÉ MORI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
