@@ -28,9 +28,57 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// お問い合わせフォーム バリデーション
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const name = document.getElementById('contactName');
+  const email = document.getElementById('contactEmail');
+  const message = document.getElementById('contactMessage');
+  const nameError = document.getElementById('nameError');
+  const emailError = document.getElementById('emailError');
+  const messageError = document.getElementById('messageError');
+
+  let valid = true;
+
+  nameError.textContent = '';
+  emailError.textContent = '';
+  messageError.textContent = '';
+  name.classList.remove('has-error');
+  email.classList.remove('has-error');
+  message.classList.remove('has-error');
+
+  if (!name.value.trim()) {
+    nameError.textContent = 'お名前を入力してください。';
+    name.classList.add('has-error');
+    valid = false;
+  }
+
+  if (!email.value.trim()) {
+    emailError.textContent = 'メールアドレスを入力してください。';
+    email.classList.add('has-error');
+    valid = false;
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+    emailError.textContent = 'メールアドレスの形式が正しくありません。';
+    email.classList.add('has-error');
+    valid = false;
+  }
+
+  if (!message.value.trim()) {
+    messageError.textContent = 'お問い合わせ内容を入力してください。';
+    message.classList.add('has-error');
+    valid = false;
+  }
+
+  if (valid) {
+    alert('送信しました');
+    contactForm.reset();
+  }
+});
+
 // スクロール時のフェードイン（Intersection Observer）
 const reveals = document.querySelectorAll(
-  '.about__inner, .menu-card, .access__inner, .section-label, .section-title'
+  '.about__inner, .menu-card, .access__inner, .contact__form, .section-label, .section-title'
 );
 
 reveals.forEach(el => el.classList.add('reveal'));

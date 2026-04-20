@@ -435,6 +435,97 @@ img {
   line-height: 1.9;
 }
 
+/* ===== Contact ===== */
+.contact {
+  padding: 8rem 0;
+  background: var(--color-cream);
+}
+
+.contact__form {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact__label {
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--color-brown-light);
+  text-transform: uppercase;
+}
+
+.contact__input {
+  background: var(--color-bg);
+  border: 1px solid rgba(107,76,42,0.2);
+  border-radius: 0;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--color-text);
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.contact__input::placeholder {
+  color: var(--color-muted);
+  opacity: 0.6;
+}
+
+.contact__input:focus {
+  border-color: var(--color-brown-light);
+}
+
+.contact__input.has-error {
+  border-color: #c0392b;
+}
+
+.contact__textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.8;
+}
+
+.contact__error {
+  font-size: 0.78rem;
+  color: #c0392b;
+  letter-spacing: 0.05em;
+  min-height: 1em;
+}
+
+.contact__submit {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.contact__btn {
+  display: inline-block;
+  padding: 0.9rem 3rem;
+  background: var(--color-brown);
+  border: 1px solid var(--color-brown);
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.contact__btn:hover {
+  background: var(--color-dark);
+  border-color: var(--color-dark);
+}
+
 /* ===== Footer ===== */
 .footer {
   background: var(--color-dark);
@@ -529,7 +620,8 @@ img {
 
   .about,
   .menu,
-  .access {
+  .access,
+  .contact {
     padding: 5rem 0;
   }
 }

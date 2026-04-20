@@ -17,6 +17,7 @@
       <li><a href="#hero">Home</a></li>
       <li><a href="#menu">Menu</a></li>
       <li><a href="#access">Access</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="nav__hamburger" id="hamburger" aria-label="メニュー">
       <span></span><span></span><span></span>
@@ -140,6 +141,33 @@
           </dl>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">お問い合わせ</h2>
+      <form class="contact__form" id="contactForm" novalidate>
+        <div class="contact__field">
+          <label class="contact__label" for="contactName">お名前</label>
+          <input class="contact__input" type="text" id="contactName" placeholder="山田 太郎">
+          <span class="contact__error" id="nameError"></span>
+        </div>
+        <div class="contact__field">
+          <label class="contact__label" for="contactEmail">メールアドレス</label>
+          <input class="contact__input" type="email" id="contactEmail" placeholder="example@email.com">
+          <span class="contact__error" id="emailError"></span>
+        </div>
+        <div class="contact__field">
+          <label class="contact__label" for="contactMessage">お問い合わせ内容</label>
+          <textarea class="contact__input contact__textarea" id="contactMessage" placeholder="ご質問・ご要望をお気軽にどうぞ。"></textarea>
+          <span class="contact__error" id="messageError"></span>
+        </div>
+        <div class="contact__submit">
+          <button type="submit" class="contact__btn">送信する</button>
+        </div>
+      </form>
     </div>
   </section>
 
